@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Josely &amp; Josué · Nuestra Boda</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Great+Vibes&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#0d1830;--navy2:#13224a;--gold:#c9a45c;--gold2:#e6cb8e;--ivory:#f6efe0;--line:rgba(201,164,92,.35);
+color-scheme:dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--navy);color:var(--ivory);font-family:'Montserrat',system-ui,sans-serif;font-weight:300;line-height:1.75;text-align:center;overflow-x:hidden}
+section{position:relative;padding:76px 26px;max-width:640px;margin:0 auto}
+h2{font-family:'Cormorant Garamond',Georgia,serif;font-weight:400;font-size:1.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin:0 0 6px}
+.script{font-family:'Great Vibes',cursive;font-weight:400;color:var(--gold)}
+.eyebrow{letter-spacing:.32em;text-transform:uppercase;font-size:.72rem;color:var(--gold2)}
+.divider{width:64px;height:1px;background:var(--gold);margin:20px auto}
+.serif{font-family:'Cormorant Garamond',Georgia,serif}
+.br{position:absolute;width:150px;height:150px;opacity:.9;pointer-events:none}
+.tl{top:0;left:0}.tr{top:0;right:0;transform:scaleX(-1)}.bl{bottom:0;left:0;transform:scaleY(-1)}.brr{bottom:0;right:0;transform:scale(-1,-1)}
+.hero{min-height:100vh;max-width:none;display:flex;flex-direction:column;align-items:center;justify-content:center;background:radial-gradient(circle at 50% 25%,var(--navy2),var(--navy) 72%)}
+.hero>*{position:relative;z-index:1}
+.names{font-size:clamp(3.2rem,15vw,5.8rem);line-height:1.1;margin:14px 0}
+.fecha{display:flex;align-items:center;justify-content:center;gap:18px;margin:8px 0}
+.fecha .mid{border-left:1px solid var(--gold);border-right:1px solid var(--gold);padding:2px 20px}
+.fecha b{font-family:'Cormorant Garamond',serif;font-size:2.4rem;font-weight:600;color:var(--gold2);display:block;line-height:1.1}
+.fecha span{letter-spacing:.3em;font-size:.75rem}
+.quote{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.4rem;color:var(--gold2)}
+.count{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:26px}
+.count div{border:1px solid var(--line);background:rgba(255,255,255,.03);padding:16px 2px}
+.count b{display:block;font-family:'Cormorant Garamond',serif;font-size:2.1rem;color:var(--gold2);font-weight:600}
+.count span{font-size:.62rem;letter-spacing:.2em;text-transform:uppercase}
+.card{border:1px solid var(--gold);padding:34px 22px;margin-top:26px;background:rgba(255,255,255,.03);position:relative}
+.card::before{content:"";position:absolute;inset:6px;border:1px solid var(--line);pointer-events:none}
+.card h3{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:1.6rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold2);margin:0}
+.btn{display:inline-block;margin-top:18px;padding:13px 28px;border:1px solid var(--gold);color:var(--gold2);text-decoration:none;font-size:.74rem;letter-spacing:.22em;text-transform:uppercase;transition:.25s;background:transparent;font-family:inherit;cursor:pointer}
+.btn:hover,.btn.solid{background:var(--gold);color:var(--navy)}
+.btn.solid:hover{opacity:.88}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .9s,transform .9s}
+.reveal.in{opacity:1;transform:none}
+footer{padding:40px 24px 70px;font-size:.8rem;color:var(--gold2)}
+/* sobre */
+#intro{position:fixed;inset:0;z-index:50;background:radial-gradient(circle at 50% 40%,var(--navy2),var(--navy));display:flex;flex-direction:column;align-items:center;justify-content:center;padding:24px;transition:opacity .9s,visibility .9s}
+#intro.off{opacity:0;visibility:hidden}
+.seal{width:112px;height:112px;border-radius:50%;border:0;cursor:pointer;margin:26px 0 14px;background:radial-gradient(circle at 35% 30%,var(--gold2),var(--gold) 55%,#8c6d32);color:var(--navy);font-family:'Great Vibes',cursive;font-size:2.4rem;box-shadow:0 8px 24px rgba(0,0,0,.5),inset 0 0 0 5px rgba(13,24,48,.18);animation:pulse 2.2s infinite}
+@keyframes pulse{50%{transform:scale(1.07)}}
+#mus{position:fixed;right:14px;bottom:calc(14px + env(safe-area-inset-bottom,0px));z-index:40;width:44px;height:44px;border-radius:50%;border:1px solid var(--gold);background:var(--navy);color:var(--gold2);font-size:1.1rem;cursor:pointer;display:none}
+#yt{position:fixed;width:1px;height:1px;opacity:0;pointer-events:none;border:0;left:0;bottom:0}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}.seal{animation:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute"><defs>
+<symbol id="rama" viewBox="0 0 150 150">
+<path d="M4 6C40 20 70 60 78 140" fill="none" stroke="#c9a45c" stroke-width="1.6"/>
+<path d="M4 6C60 6 120 30 144 80" fill="none" stroke="#c9a45c" stroke-width="1.6"/>
+<g fill="#c9a45c"><ellipse cx="30" cy="30" rx="11" ry="4" transform="rotate(40 30 30)"/><ellipse cx="52" cy="58" rx="11" ry="4" transform="rotate(62 52 58)"/><ellipse cx="68" cy="92" rx="11" ry="4" transform="rotate(80 68 92)"/><ellipse cx="62" cy="14" rx="11" ry="4" transform="rotate(15 62 14)"/><ellipse cx="102" cy="32" rx="11" ry="4" transform="rotate(30 102 32)"/><ellipse cx="128" cy="60" rx="11" ry="4" transform="rotate(55 128 60)"/></g>
+<g fill="#f6efe0"><circle cx="44" cy="40" r="9"/><circle cx="36" cy="22" r="6"/><circle cx="80" cy="22" r="8"/><circle cx="60" cy="74" r="7"/><circle cx="116" cy="44" r="7"/></g>
+<g fill="#c9a45c"><circle cx="44" cy="40" r="3"/><circle cx="80" cy="22" r="2.6"/><circle cx="116" cy="44" r="2.4"/></g>
+</symbol></defs></svg>
+
+<div id="intro">
+  <div class="eyebrow">Estás invitado a</div>
+  <div class="script" style="font-size:3rem">Josely &amp; Josué</div>
+  <button class="seal" id="abrir" aria-label="Abrir invitación">J&amp;J</button>
+  <div class="eyebrow">Toca el sello para abrir</div>
+</div>
+
+<button id="mus" aria-label="Música">♪</button>
+<iframe id="yt" title="Música" allow="autoplay"></iframe>
+
+<section class="hero">
+  <svg class="br tl"><use href="#rama"/></svg><svg class="br tr"><use href="#rama"/></svg><svg class="br bl"><use href="#rama"/></svg><svg class="br brr"><use href="#rama"/></svg>
+  <div class="script" style="font-size:2.6rem">¡Nos casamos!</div>
+  <p style="max-width:380px;margin:8px 0 22px">Hay momentos en la vida que se vuelven inolvidables cuando se comparten con las personas que amamos.</p>
+  <div class="eyebrow">Con mucha alegría</div>
+  <div class="names script">Josely &amp; Josué</div>
+  <p class="eyebrow" style="max-width:340px">Tenemos el honor de invitarte a celebrar nuestra unión matrimonial</p>
+  <div class="divider"></div>
+  <div class="fecha"><span>DOMINGO</span><div class="mid"><b>22 · 11</b><b style="font-size:1.3rem">2026</b></div><span>5:00 P. M.</span></div>
+</section>
+
+<section class="reveal">
+  <p class="quote">Una unión, una promesa, una vida juntos.</p>
+  <h2 style="margin-top:36px">Faltan</h2>
+  <div class="count"><div><b id="d">0</b><span>Días</span></div><div><b id="h">0</b><span>Horas</span></div><div><b id="m">0</b><span>Min</span></div><div><b id="s">0</b><span>Seg</span></div></div>
+</section>
+
+<section class="reveal">
+  <h2>Ceremonia civil y eclesiástica</h2>
+  <div class="divider"></div>
+  <div class="card">
+    <h3>Casa Blanca</h3>
+    <p style="margin:6px 0">El Porvenir, Atlántida, Honduras</p>
+    <p class="serif" style="font-style:italic;color:var(--gold2);margin:12px 0 0">Recepción en el mismo lugar<br>Detalles especiales</p>
+    <a class="btn" href="https://maps.app.goo.gl/ESxJ83EGfRD4ubbU6" target="_blank" rel="noopener">Ubicación</a>
+  </div>
+</section>
+
+<section class="reveal">
+  <h2>Código de vestimenta</h2>
+  <div class="divider"></div>
+  <p class="script" style="font-size:2.6rem;margin:0">Formal</p>
+  <p>Agradecemos evitar los tonos blanco y rojo.</p>
+</section>
+
+<section class="reveal">
+  <h2>Confirma tu asistencia</h2>
+  <div class="divider"></div>
+  <p>Agradecemos confirmar antes del <b>14 de noviembre de 2026</b>.</p>
+  <a class="btn solid" id="wa" href="#" target="_blank" rel="noopener">WhatsApp +504 9945-3873</a>
+</section>
+
+<section class="reveal">
+  <h2>Un detalle para los novios</h2>
+  <div class="divider"></div>
+  <p>Tu presencia es nuestro mejor regalo. Si deseas obsequiarnos algo, agradeceremos mucho tu detalle en efectivo, o con todo nuestro cariño.</p>
+</section>
+
+<footer><div class="script" style="font-size:2.4rem">¡Te esperamos!</div>Josely &amp; Josué · 22.11.2026</footer>
+
+<script>
+(function(){
+  var boda=new Date('2026-11-22T17:00:00-06:00').getTime();
+  var el=['d','h','m','s'].map(function(i){return document.getElementById(i)});
+  function tick(){var t=Math.max(0,boda-Date.now());[Math.floor(t/864e5),Math.floor(t%864e5/36e5),Math.floor(t%36e5/6e4),Math.floor(t%6e4/1e3)].forEach(function(x,i){el[i].textContent=x})}
+  tick();setInterval(tick,1000);
+  document.getElementById('wa').href='https://wa.me/50499453873?text='+encodeURIComponent('Hola, confirmo mi asistencia a la boda de Josely y Josué. Nombre: ');
+  var yt=document.getElementById('yt'),mus=document.getElementById('mus'),on=false;
+  function cmd(f){try{yt.contentWindow.postMessage(JSON.stringify({event:'command',func:f,args:''}),'*')}catch(e){}}
+  document.getElementById('abrir').addEventListener('click',function(){
+    document.getElementById('intro').classList.add('off');
+    yt.src='https://www.youtube-nocookie.com/embed/GgVFVAUc6uA?autoplay=1&loop=1&playlist=GgVFVAUc6uA&enablejsapi=1';
+    mus.style.display='block';on=true;mus.textContent='♪';
+  });
+  mus.addEventListener('click',function(){on=!on;cmd(on?'playVideo':'pauseVideo');mus.textContent=on?'♪':'✕'});
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.15});
+  document.querySelectorAll('.reveal').forEach(function(x){io.observe(x)});
+})();
+</script>
+</body>
+</html>
