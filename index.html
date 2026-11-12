@@ -141,7 +141,7 @@ footer{padding:40px 24px 70px;font-size:.8rem;color:var(--gold2)}
   function cmd(f){try{yt.contentWindow.postMessage(JSON.stringify({event:'command',func:f,args:''}),'*')}catch(e){}}
   document.getElementById('abrir').addEventListener('click',function(){
     document.getElementById('intro').classList.add('off');
-    yt.src='https://www.youtube-nocookie.com/embed/GgVFVAUc6uA?autoplay=1&start=13&enablejsapi=1';
+    yt.src='https://youtu.be/sxlStPQbYOY?t=6';
     yt.onload=function(){try{yt.contentWindow.postMessage(JSON.stringify({event:'listening',id:1}),'*')}catch(e){}};
     window.addEventListener('message',function(e){try{var d=typeof e.data==='string'?JSON.parse(e.data):e.data;if(d&&d.event==='onStateChange'&&d.info===0&&on){yt.contentWindow.postMessage(JSON.stringify({event:'command',func:'seekTo',args:[13,true]}),'*');cmd('playVideo')}}catch(x){}});
     mus.style.display='block';on=true;mus.textContent='♪';
